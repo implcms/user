@@ -1,0 +1,16 @@
+name: 用户管理
+description: 用户管理系统，默认以微信用户数据为准 同时还可以增加其他属性
+email: gheniablez@gmail.com
+depends:
+  admin: 
+    menus:
+      user:
+        lable: 用户
+        icon: i-Boy
+        url: 'admin/user'
+        order: 999
+        sub_menus: 
+        -
+            lable: 用户列表
+            icon: i-Boy
+            url: 'admin/user'

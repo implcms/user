@@ -1,0 +1,53 @@
+schema:
+    nickname: string 
+    sex: tinyInteger
+    city: string
+    province: string
+    country: string
+    avatar: string
+    phone: string
+    unionid: string|64
+    metadata: json
+    _indexs:
+        unionid: unionid
+        phone: phone
+    _dropIfExist: true
+admin:
+  columns:
+    - 
+      name: id
+      label: "#"
+    - 
+      name: metadata_wechat_headimgurl
+      label: 头像
+      type: avatar
+      src: "%s"
+    - 
+      name: nickname
+      label: 昵称
+    - 
+      name: sex
+      label: 性别
+      type: tags
+      options:
+        0: 未知
+        1: 男
+        2: 女
+    - 
+      name: country
+      label: 国家
+    - 
+      name: province
+      label: 省
+    - 
+      name: city
+      label: 城市
+default:
+    columns:
+    - nickname
+    - phone
+    - sex
+    - country
+    - province
+    - city
+    - metadata

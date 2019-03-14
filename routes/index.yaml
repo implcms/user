@@ -1,0 +1,7 @@
+url: admin/user
+layout: admin@default
+layoutData:
+    pageTitle: 用户列表
+page: admin@common.record-list
+data:
+  modelConfig: user@user.admin
