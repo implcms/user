@@ -7,19 +7,20 @@ schema:
     avatar: string
     phone: string
     unionid: string|64
+    password: string
     metadata: json
-    _indexs:
-        unionid: unionid
+    _uniques:
         phone: phone
-    _dropIfExist: true
+        unionid: unionid
+    
 admin:
   columns:
     - 
       name: id
       label: "#"
     - 
-      name: metadata_wechat_headimgurl
-      label: 头像
+      name: metadata__wechat_headimgurl
+      label: 微信头像
       type: avatar
       src: "%s"
     - 
